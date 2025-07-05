@@ -1,0 +1,15 @@
+# base platform
+FROM ubuntu:noble
+
+# update packages
+RUN apt-get update \
+ && apt-get install -y apt-utils 
+
+# install development utilities
+# compiler and build too
+RUN  apt-get update \
+  && apt-get install -y cmake gcc-14 ninja-build
+
+RUN apt-get install -y qt6-base-dev  build-essential libgl1-mesa-dev
+
+RUN apt-get install -y libgtest-dev libgmock-dev
