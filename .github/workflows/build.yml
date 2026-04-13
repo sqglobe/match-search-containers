@@ -1,8 +1,6 @@
 name: Build docker image to test
 on:
-  push:
-    branches-ignore:
-      - main
+  pull_request
 jobs:
   build-image:
     runs-on: ubuntu-latest
